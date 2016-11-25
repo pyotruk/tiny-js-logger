@@ -1,4 +1,4 @@
-module.exports = function (name) {
+module.exports = function (level, name) {
 
     var levels = {
         'debug': 1,
@@ -7,8 +7,7 @@ module.exports = function (name) {
         'error': 4
     };
 
-    var globalLogLevel = global.LOG_LEVEL ? global.LOG_LEVEL : window.LOG_LEVEL ? window.LOG_LEVEL : 'warn';
-    var levelId = levels[globalLogLevel];
+    var levelId = levels[level];
     if (!levelId) throw new Error('Logger: invalid level');
 
     var log = function (lvl, msg) {
