@@ -1,6 +1,6 @@
 {
   "name": "tiny-js-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper for browser console.log",
   "repository": "https://github.com/pyotruk/tiny-js-logger.git",
   "main": "index.js",

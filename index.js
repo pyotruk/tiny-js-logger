@@ -16,7 +16,7 @@ module.exports = function (level, name) {
 
         msg = new Date().toISOString() + ' - [' + name + '] - ' + msg;
 
-        if (console.hasOwnProperty(lvl) && typeof console[lvl] === 'function') {
+        if (console[lvl] && typeof console[lvl] === 'function') {
             console[lvl](msg);
         } else {
             msg = '<' + lvl + '> ' + msg;
